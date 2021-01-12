@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:87/ServicioAgente.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiciosFOP.Models" />
+  <xs:import schemaLocation="http://localhost:87/ServicioAgente.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:element name="GuardarAspirate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiciosFOP.Models" minOccurs="0" name="NuevoAspirante" nillable="true" type="q1:Aspirante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAspirateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="GuardarAspirateResult" type="q2:KeyValuePairOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarAspirantesActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarAspirantesActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServiciosFOP.Models" minOccurs="0" name="ListarAspirantesActivosResult" nillable="true" type="q3:ArrayOfAspirante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAspirantePorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAspirante" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAspirantePorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ServiciosFOP.Models" minOccurs="0" name="ObtenerAspirantePorIdResult" nillable="true" type="q4:Aspirante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarAspirante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAspirante" type="xs:int" />
+        <xs:element minOccurs="0" name="NuevoEstatus" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarAspiranteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="ActualizarAspiranteResult" type="q5:KeyValuePairOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAspirantesSinGrupo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAspirantesSinGrupoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServiciosFOP.Models" minOccurs="0" name="ObtenerAspirantesSinGrupoResult" nillable="true" type="q6:ArrayOfAspirante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
